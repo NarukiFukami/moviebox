@@ -1,0 +1,31 @@
+%h1="showwwwww"
+=@filmdetail.title
+%br
+%br
+=@filmdetail.release
+%br
+%br
+=@filmdetail.starring
+%br
+%br
+=@filmdetail.category
+%br
+%br
+=@filmdetail.description
+%br
+%br
+=@filmdetail.director.name
+%br
+%br
+%h2 RELATED WORKS
+-@filmdetail.director.filmdetails.each do |filmdetail|
+  -unless @filmdetail == filmdetail
+    =link_to "#{filmdetail.title}, (#{filmdetail.release})", filmdetail_path(filmdetail)
+    %br
+
+=link_to "Go to TOP", filmdetails_path
+=link_to "Go to EDIT", edit_filmdetail_path(@filmdetail)
+=link_to "Go to DELETE", filmdetail_path(@filmdetail), method: :delete, data: {confirm: "削除しますか？"}
+
+-# -director = Director.find(@filmdetail.director_id)
+-# =director.name

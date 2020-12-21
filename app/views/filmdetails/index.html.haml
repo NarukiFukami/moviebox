@@ -1,0 +1,238 @@
+-# %h1 Index
+-# -# -index = 1
+-# -# -@filmdetails.each do |filmdetail|
+-# -#   =index
+-# -#   =link_to filmdetail.name, filmdetail_path(filmdetail.id)
+-# -#   %br
+-# -#   -index += 1
+-# -index = 1
+-# -@filmdetails.each_with_index do |filmdetail, index|
+-#   #{index + 1}.
+-#   =link_to filmdetail.title, filmdetail_path(filmdetail)
+-#   %br
+-#   %br
+-# =link_to "Register", new_filmdetail_path
+
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0,maximum-scale=1", :name => "viewport"}/
+    %title Movie Review
+    / Loading third party fonts
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:300,400,700|", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "fonts/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    / Loading main css file
+    %link{:href => "style.css", :rel => "stylesheet"}/
+    /[if lt IE 9]
+      <script src="js/ie-support/html5.js"></script>
+      <script src="js/ie-support/respond.js"></script>
+  %body
+    #site-content
+      %header.site-header
+        .container
+          %a#branding{:href => "index.html"}
+            %img.logo{:alt => "", :src => "images/logo.png"}/
+            .logo-copy
+              %h1.site-title Company Name
+              %small.site-description Tagline goes here
+          / #branding
+          .main-navigation
+            %button.menu-toggle{:type => "button"}
+              %i.fa.fa-bars
+            %ul.menu
+              %li.menu-item.current-menu-item
+                %a{:href => "index.html"} Home
+              %li.menu-item
+                %a{:href => "about.html"} About
+              %li.menu-item
+                %a{:href => "review.html"} Movie reviews
+              %li.menu-item
+                %a{:href => "joinus.html"} Join us
+              %li.menu-item
+                %a{:href => "contact.html"} Contact
+            / .menu
+            %form.search-form{:action => "#"}
+              %input{:placeholder => "Search...", :type => "text"}/
+              %button
+                %i.fa.fa-search
+          / .main-navigation
+          .mobile-navigation
+      %main.main-content
+        .container
+          .page
+            .row
+              .col-md-9
+                .slider
+                  %ul.slides
+                    %li
+                      %a{:href => "#"}
+                        %img{:alt => "Slide 1", :src => "dummy/slide-1.jpg"}/
+                    %li
+                      %a{:href => "#"}
+                        %img{:alt => "Slide 2", :src => "dummy/slide-2.jpg"}/
+                    %li
+                      %a{:href => "#"}
+                        %img{:alt => "Slide 3", :src => "dummy/slide-3.jpg"}/
+              .col-md-3
+                .row
+                  .col-sm-6.col-md-12
+                    .latest-movie
+                      %a{:href => "#"}
+                        %img{:alt => "Movie 1", :src => "dummy/thumb-1.jpg"}/
+                  .col-sm-6.col-md-12
+                    .latest-movie
+                      %a{:href => "#"}
+                        %img{:alt => "Movie 2", :src => "dummy/thumb-2.jpg"}/
+            / .row
+            .row
+              .col-sm-6.col-md-3
+                .latest-movie
+                  %a{:href => "#"}
+                    %img{:alt => "Movie 3", :src => "dummy/thumb-3.jpg"}/
+              .col-sm-6.col-md-3
+                .latest-movie
+                  %a{:href => "#"}
+                    %img{:alt => "Movie 4", :src => "dummy/thumb-4.jpg"}/
+              .col-sm-6.col-md-3
+                .latest-movie
+                  %a{:href => "#"}
+                    %img{:alt => "Movie 5", :src => "dummy/thumb-5.jpg"}/
+              .col-sm-6.col-md-3
+                .latest-movie
+                  %a{:href => "#"}
+                    %img{:alt => "Movie 6", :src => "dummy/thumb-6.jpg"}/
+            / .row
+            .row
+              .col-md-4
+                %h2.section-title December premiere
+                %p Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                %ul.movie-schedule
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                / .movie-schedule
+              .col-md-4
+                %h2.section-title November premiere
+                %p Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                %ul.movie-schedule
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                / .movie-schedule
+              .col-md-4
+                %h2.section-title October premiere
+                %p Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                %ul.movie-schedule
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                  %li
+                    .date 16/12
+                    %h2.entry-title
+                      %a{:href => "#"} Perspiciatis unde omnis
+                / .movie-schedule
+        / .container
+      %footer.site-footer
+        .container
+          .row
+            .col-md-2
+              .widget
+                %h3.widget-title About Us
+                %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate
+            .col-md-2
+              .widget
+                %h3.widget-title Recent Review
+                %ul.no-bullet
+                  %li
+                    %a{:href => "#"} Lorem ipsum dolor
+                  %li
+                    %a{:href => "#"} Sit amet consecture
+                  %li
+                    %a{:href => "#"} Dolorem respequem
+                  %li
+                    %a{:href => "#"} Invenore veritae
+            .col-md-2
+              .widget
+                %h3.widget-title Help Center
+                %ul.no-bullet
+                  %li
+                    %a{:href => "#"} Lorem ipsum dolor
+                  %li
+                    %a{:href => "#"} Sit amet consecture
+                  %li
+                    %a{:href => "#"} Dolorem respequem
+                  %li
+                    %a{:href => "#"} Invenore veritae
+            .col-md-2
+              .widget
+                %h3.widget-title Join Us
+                %ul.no-bullet
+                  %li
+                    %a{:href => "#"} Lorem ipsum dolor
+                  %li
+                    %a{:href => "#"} Sit amet consecture
+                  %li
+                    %a{:href => "#"} Dolorem respequem
+                  %li
+                    %a{:href => "#"} Invenore veritae
+            .col-md-2
+              .widget
+                %h3.widget-title Social Media
+                %ul.no-bullet
+                  %li
+                    %a{:href => "#"} Facebook
+                  %li
+                    %a{:href => "#"} Twitter
+                  %li
+                    %a{:href => "#"} Google+
+                  %li
+                    %a{:href => "#"} Pinterest
+            .col-md-2
+              .widget
+                %h3.widget-title Newsletter
+                %form.subscribe-form{:action => "#"}
+                  %input{:placeholder => "Email Address", :type => "text"}/
+          / .row
+          .colophon Copyright 2014 Company name, Designed by Themezy. All rights reserved
+        / .container
+    / Default snippet for navigation
+    %script{:src => "js/jquery-1.11.1.min.js"}
+    %script{:src => "js/plugins.js"}
+    %script{:src => "js/app.js"}
